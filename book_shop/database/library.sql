@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2019. Ápr 01. 15:18
+-- Létrehozás ideje: 2019. Ápr 01. 21:18
 -- Kiszolgáló verziója: 10.1.38-MariaDB
 -- PHP verzió: 7.3.3
 
@@ -46,7 +46,7 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`book_id`, `publishing`, `story`, `book_title`, `cover_image`, `lid`, `quantity`, `language_id`, `writer_id`, `category_id`) VALUES
-(7, '2019-03-08', 'Jó könyv.', 'A homály visszatér - A Gyűrűk Ura históriája I.', 'hom.jpg', 'Keményfedeles', 200, 1, 2, 3),
+(7, '2019-03-08', 'Jó könyv.', 'A homály visszatér - A Gyűrűk Ura históriája I.', 'hom.jpg', 'Keményfedeles', 200, 3, 2, 3),
 (9, '2019-03-16', 'Ez is jó könyv.', 'A szilmarilok', 'szilm.jpg', 'Keményfedeles', 2000, 1, 2, 3),
 (10, '2019-03-02', 'Nem rossz könyv.', 'Twilight - Alkonyat', 'alko.jpg', 'Keményfedeles', 200, 1, 3, 3),
 (11, '2019-04-03', 'Érdekes könyv.', 'Égvilág - Az új birodalom - III. könyv', 'eg.jpg', 'Keményfedeles', 100, 1, 4, 3);
@@ -113,7 +113,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `birthday`) VALUES
-(1, 'admin', '1bbd886460827015e5d605ed44252251', 'admin@gmail.com', '2019-03-29');
+(1, 'admin', '1bbd886460827015e5d605ed44252251', 'admin@gmail.com', '2019-03-29'),
+(2, 'roland', '25d55ad283aa400af464c76d713c07ad', 'valami@gmail.com', '2019-04-10'),
+(3, 'konyvimado', '25f9e794323b453885f5181f1b624d0b', 'konyv@gmail.com', '2019-04-11'),
+(4, 'konyvbarat', 'ed2b1f468c5f915f3f1cf75d7068baae', 'konyvecske@gmail.com', '2019-04-07'),
+(5, 'konyvmoly', '63f692e97f447c914985b05bb2ec7ec4', 'konyves@gmail.com', '2019-04-14');
 
 -- --------------------------------------------------------
 
@@ -208,13 +212,13 @@ ALTER TABLE `languages`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT a táblához `writer`
 --
 ALTER TABLE `writer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Megkötések a kiírt táblákhoz
